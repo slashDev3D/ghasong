@@ -1,0 +1,165 @@
+.artistMain {
+  width: 100%;
+  height: 100%;
+  margin-top: 120px;
+}
+
+.artistMain h2 {
+  padding: 0px 20px;
+  font-size: 52px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 300;
+}
+
+.artistMain .artist-thumb {
+  display: none !important;
+  z-index: 999;
+  pointer-events: none;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 590px;
+  height: 392px;
+}
+
+.artistMain .artist-thumb .thumb-list {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  display: none;
+  pointer-events: none;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.artistMain .artist-thumb .thumb-list.on {
+  opacity: 1;
+}
+
+.artistMain .artistWrap {
+  padding: 0px 20px;
+  margin-top: 60px;
+  margin-bottom: 100px;
+  width: 100%;
+  height: 100%;
+}
+
+.artistMain .artistWrap div.artist-list {
+  position: relative;
+}
+
+.artistMain .artistWrap div.artist-list a {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 15px 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.artistMain .artistWrap div.artist-list a p {
+  pointer-events: none;
+}
+
+.artistMain .artistWrap div.artist-list a .artist-number {
+  opacity: 0;
+  -webkit-transform: translate(0%, 80%);
+          transform: translate(0%, 80%);
+  font-size: 12px;
+  vertical-align: bottom;
+  color: #b79a5f;
+}
+
+.artistMain .artistWrap div.artist-list a .artist-Eng {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 22px;
+  opacity: 0;
+  -webkit-transform: translate(0%, 80%);
+          transform: translate(0%, 80%);
+}
+
+.artistMain .artistWrap div.artist-list a .artist-Kor {
+  padding-top: 6px;
+  font-size: 12px;
+  opacity: 0;
+  -webkit-transform: translate(0%, 80%);
+          transform: translate(0%, 80%);
+}
+
+.artistMain .artistWrap div.artist-list .line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #dddddd;
+  -webkit-transform: translate(-50%, 0%) scaleX(0);
+          transform: translate(-50%, 0%) scaleX(0);
+}
+
+.artistMain .artistWrap div.artist-list.on .line {
+  -webkit-transform: translate(0%, 0%) scaleX(1);
+          transform: translate(0%, 0%) scaleX(1);
+}
+
+.artistMain .artistWrap div.artist-list.on .artist-number {
+  opacity: 1;
+  -webkit-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
+}
+
+.artistMain .artistWrap div.artist-list.on .artist-Eng {
+  opacity: 1;
+  -webkit-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
+}
+
+.artistMain .artistWrap div.artist-list.on .artist-Kor {
+  opacity: 1;
+  -webkit-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
+}
+
+@media screen and (min-width: 1280px) {
+  .artistMain {
+    margin-top: 267px;
+  }
+  .artistMain h2 {
+    padding: 0px;
+    font-size: 120px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 300;
+  }
+  .artistMain .artistWrap {
+    padding: 0px 0px;
+    margin-top: 120px;
+    margin-bottom: 180px;
+  }
+  .artistMain .artistWrap div.artist-list a {
+    padding: 40px 60px;
+  }
+  .artistMain .artistWrap div.artist-list a .artist-number {
+    font-size: 20px;
+    margin-top: 16px;
+    display: block;
+  }
+  .artistMain .artistWrap div.artist-list a .artist-Eng {
+    font-size: 48px;
+  }
+  .artistMain .artistWrap div.artist-list a .artist-Kor {
+    padding-top: 0px;
+    color: #999999;
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  .artistMain .artist-thumb .thumb-list {
+    display: block;
+  }
+}
+/*# sourceMappingURL=artist.css.map */

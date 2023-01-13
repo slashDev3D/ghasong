@@ -1,0 +1,280 @@
+.closed{
+    width: 100%;
+    max-width: 50px;
+    display: block;
+    padding: 20px 0;
+    margin:120px auto 0;
+}
+.closed-text2{
+    text-align: center;
+}
+h4.closed-text2{
+    font-size: 18px;
+    b{
+        color: #b79a5f;
+    }
+}
+h5.closed-text2{
+    margin-top: 10px;
+    margin-bottom: 220px;
+    font-size: 14px;
+    color: #999999;
+    b{
+        color: #b79a5f;
+    }
+}
+.thumb{
+    position: relative;
+    .play{
+        width: 64px;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 50%;
+        opacity: 1;
+    }
+    .hover{
+        opacity: 0;
+    }
+&:hover{
+   .play.normal{
+        opacity: 0;
+    }
+    .play.hover{
+        opacity: 1;
+    }
+}
+}
+.mediaMain{
+    margin-top: 120px;
+    width: 100%;
+    padding: 0 20px;
+    h4.closed-text{
+        text-align: center;
+        font-size: 24px;
+        color: #333333;
+        margin: 0 auto 120px;
+    }
+    .mainHeader{
+        h2{
+            font-family: 'Times New Roman', Times, serif;
+            display: inline-block;
+            font-size: 50px;
+            font-weight: 300;
+            span{
+                font-size: 12px;
+                vertical-align: top;
+                font-weight: 400;
+                color: rgba(0,0,0,0.4);
+                letter-spacing: -1px;
+            }
+        }
+    }
+    .media-container{
+        margin-bottom: 40px;
+        width: 100%;
+        margin-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .vr-content{
+            cursor: pointer;
+            margin-bottom:clamp(12px, 8vw, 120px);
+            width: 100%;
+            .thumb{
+                position: relative;
+                width: 100%;
+                .bg img{
+                    width: 100%;
+                }
+                .btn-play{
+                    position: absolute;
+                    transform: translate(-50%,-50%);
+                    left: 50%;
+                    top: 50%;
+                }
+            }
+            h3,h4{
+                font-size: 16px;
+                margin-top: 20px;
+                font-weight: bold;
+            }
+            h4{
+                font-size: 14px;
+                margin-top: 12px;
+                color: #666666;
+                font-weight: 300;
+            }
+        }
+        .video-content{
+            margin-bottom: 80px;
+            width: 100%;
+            .thumb{
+                cursor: pointer;
+                width: 100%;
+            }
+            h3,h4{
+                font-size: 18px;
+                margin-top: 20px;
+                font-weight: bold;
+            }
+            h4{
+                font-size: 14px;
+                margin-top: 12px;
+                color: #666666;
+                font-weight: 300;
+            }
+        }
+    }
+}
+.vr-content:nth-child(1){
+    .thumb{background-image: url(/img/vr_thumb01.jpg);}
+}
+.video-popup{
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: none;
+    background-color: #000000cc;
+    .videoWrap{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        .video-list{
+            position: absolute;
+            display: none;
+            transform: translate(-50%,-50%);
+            top: 50%;
+            left: 50%;
+        &.on{
+            display: block;
+        }
+        }
+    }
+&.on{
+    display: block;
+}
+}
+iframe{
+    width: 340px;
+    height: 245px;
+}
+@media screen and(min-width:678px){
+    h4.closed-text2{
+        font-size: 32px;
+    }
+    h5.closed-text2{
+        margin-top: 20px;
+        margin-bottom: 240px;
+        font-size: 18px;
+    }
+    iframe{
+        width: 600px;
+        height: 450px;
+    }
+    .closed{
+        width: 100%;
+        max-width: 100px;
+        display: block;
+        padding: 40px 0;
+        margin:120px auto 0;
+    }
+    .mediaMain{
+        h4.closed-text{
+            width: 700px;
+            text-align: center;
+            font-size: 48px;
+            color: #333333;
+            margin: 0 auto 120px;
+        }
+        .media-container{
+            margin-bottom: 100px;
+            .vr-content{
+                margin-bottom:0px;
+                width: calc(50% - clamp(6px, 1vw, 30px));
+                .thumb{
+                    .btn-play{
+                        position: absolute;
+                        transform: translate(-50%,-50%);
+                        left: 50%;
+                        top: 50%;
+                    }
+                }
+                h3,h4{
+                    font-size: 16px;
+                    margin-top: 20px;
+                }
+                h4{
+                    font-size: 14px;
+                    margin-top: 12px;
+                }
+            }
+            .video-content{
+                margin-bottom: 80px;
+                width: 100%;
+                .thumb{
+                    cursor: pointer;
+                    width: 100%;
+                }
+                h3,h4{
+                    font-size: 18px;
+                    margin-top: 20px;
+                    font-weight: bold;
+                }
+                h4{
+                    font-size: 14px;
+                    margin-top: 12px;
+                    color: #666666;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}
+@media screen and(min-width:980px){
+    iframe{
+        width: 800px;
+        height: 600px;
+    }
+}
+@media screen and (min-width:1280px){
+    iframe{
+        width: 1240px;
+        height: 810px;
+    }
+    .mediaMain{
+        margin-top: 267px;
+        padding: 0 0px;
+        .mainHeader{
+            h2{
+                font-size: 100px;
+                span{
+                    font-size: 24px;
+                    letter-spacing: -2px;
+                }
+            }
+        }
+        .media-container{
+            margin-top: 80px;
+            margin-bottom: 180px;
+            .media-content{
+                h3,h4{
+                    font-size: 24px;
+                    margin-top: 20px;
+                    font-weight: bold;
+                }
+                h4{
+                    font-weight: 500;
+                    font-size: 16px;
+                    color: rgba(0,0,0,0.4);
+                }
+            }
+        }
+    }
+}
+
+
+
